@@ -1,0 +1,144 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<context:component-scan base-package="com.controller.*" />
+	<mvc:annotation-driven validator="validator">
+		<mvc:argument-resolvers>
+			<bean class="com.github.dandelion.datatables.extras.spring3.ajax.DatatablesCriteriasMethodArgumentResolver" />
+		</mvc:argument-resolvers>
+		
+	</mvc:annotation-driven>
+	<mvc:resources mapping="/themes/**" location="/themes/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/assets/**" location="/assets/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/dandelion/**" location="/dandelion/" />
+	<mvc:resources mapping="/datatables/**" location="/datatables/" />
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/jayhind?characterEncoding=UTF-8" />
+		<property name="username" value="postgres" />
+		<property name="password" value="jayhind" /> 
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+	</bean>
+	
+	<!-- Apache Tiles -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>
+				org.springframework.web.servlet.view.tiles3.TilesView
+			</value>
+		</property>
+		<property name="order" value="0" />
+	</bean>
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Application I18n Message Bundle -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:global" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="en" />
+		<property name="cookieName" value="DAMLocaleCookie" />
+		<property name="cookieMaxAge" value="3600" />
+	</bean>
+	<bean id="localeChangeInterceptor"
+		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<property name="paramName" value="locale" />
+	</bean>
+	
+	
+	<!-- Theme Change Interceptor and Resolver definition -->
+	<bean id="themeSource"
+		class="org.springframework.ui.context.support.ResourceBundleThemeSource">
+		<property name="basenamePrefix" value="theme-" />
+	</bean>
+	<bean id="themeChangeInterceptor"
+		class="org.springframework.web.servlet.theme.ThemeChangeInterceptor">
+		<property name="paramName" value="theme" />
+	</bean>
+	<bean id="themeResolver"
+		class="org.springframework.web.servlet.theme.CookieThemeResolver">
+		<property name="defaultThemeName" value="default" />
+	</bean>
+	<mvc:interceptors>
+		<ref bean="localeChangeInterceptor" />
+    	<ref bean="themeChangeInterceptor"/>
+	</mvc:interceptors>
+	
+	<!-- Localization of hibernate messages during validation!-->
+	<bean id="validationMessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    	<property name="basename" value="classpath:validation" />
+	</bean>
+
+	<bean name="validator"  class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+   	 	<property name="validationMessageSource">
+        	<ref bean="validationMessageSource"/>
+    	</property>
+	</bean>
+	
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+			<!-- one of the properties available; the maximum file size in bytes -->
+  		<property name="maxUploadSize" value="9992097152"/>
+	</bean>
+	
+	<bean id="UserLoginDAO" class="com.dao.UserLoginDAOImpl"></bean>
+	<bean id="ProgramDAO" class="com.dao.ProgramDAOImpl"></bean>
+	<bean id="NationalProgramDAO" class="com.dao.NationalProgramDAOImpl"></bean>
+	<bean id="StateProgramDAO" class="com.dao.StateProgramDAOImpl"></bean>
+	<bean id="OtherProgramDAO" class="com.dao.OtherProgramDAOImpl"></bean>
+	<bean id="VideoDAO" class="com.dao.VideoDAOImpl"></bean>
+	<bean id="ContactDAO" class="com.dao.ContactDAOImpl"></bean>
+	<bean id="HeadingDAO" class="com.dao.HeadingDAOImpl"></bean>
+	<bean id="BusinessDAO" class="com.dao.BusinessDAOImpl"></bean>
+	<bean id="SportDAO" class="com.dao.SportDAOImpl"></bean>
+	<bean id="TechnologyDAO" class="com.dao.TechnologyDAOImpl"></bean>
+	<bean id="AstroDAO" class="com.dao.AstroDAOImpl"></bean>
+	<bean id="PollDAO" class="com.dao.PollDAOImpl"></bean>
+	<bean id="EntertainmentDAO" class="com.dao.EntertainmentDAOImpl"></bean>
+	<bean id="FashionDAO" class="com.dao.FashionDAOImpl"></bean>
+	<bean id="GameDAO" class="com.dao.GameDAOImpl"></bean>
+	<bean id="LinkDAO" class="com.dao.LinkDAOImpl"></bean>
+	<bean id="SponsorDAO" class="com.dao.SponsorDAOImpl"></bean>
+	<bean id="AdvertisementDAO" class="com.dao.AdvertisementDAOImpl"></bean>
+	<bean id="GreetingDAO" class="com.dao.GreetingDAOImpl"></bean>
+	<bean id="PhotographyDAO" class="com.dao.PhotographyDAOImpl"></bean>
+	<bean id="UserDAO" class="com.dao.UserDAOImpl"></bean>
+	<bean id="RoleDAO" class="com.dao.RoleDAOImpl"></bean>
+	<bean id="ChangePasswordDAO" class="com.dao.ChangePasswordDAOImpl"></bean>
+	<bean id="HomePageDAO" class="com.dao.HomePageDAOImpl"></bean>
+	<bean id="Imagemagick" class="com.image.imagemagick.Imagemagick"></bean>
+	<!-- Map returned view name "rssViewer" to bean id "rssViewer" -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+	<bean id="rssViewer" class="com.common.rss.CustomRssViewer" />
+	
+</beans>

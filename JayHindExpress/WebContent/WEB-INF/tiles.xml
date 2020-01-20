@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">        
+<tiles-definitions>  
+
+	<definition name="login" template="/WEB-INF/pages/login.jsp">
+	</definition>
+	
+	<definition name="pollDetailTile" template="/WEB-INF/pages/polldetails.jsp">
+	</definition>
+
+
+	<definition name="front.definition" template="/WEB-INF/pages/frontPages/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/pages/frontPages/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/frontPages/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/pages/frontPages/footer.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="front.definition2" template="/WEB-INF/pages/frontPages/layout2.jsp">
+		<put-attribute name="title" value="Jay Hind Express" />
+		<put-attribute name="header" value="/WEB-INF/pages/frontPages/header2.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/frontPages/menu2.jsp" />
+		<put-attribute name="breaking" value="/WEB-INF/pages/frontPages/breaking2.jsp" />
+		<put-attribute name="slider" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="sidebar" value="/WEB-INF/pages/frontPages/sidebar2.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/frontPages/footer2.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="homePageTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Home Page" />
+		<put-attribute name="breaking" value="/WEB-INF/pages/frontPages/breaking2.jsp" />
+		<put-attribute name="slider" value="/WEB-INF/pages/frontPages/slider2.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/index2.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	<definition name="cityPageTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Home Page" />
+		<put-attribute name="breaking" value="/WEB-INF/pages/frontPages/breaking2.jsp" />
+		<put-attribute name="slider" value="/WEB-INF/pages/frontPages/slider2.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/index2.jsp" />
+		<put-attribute name="menuselection" value="city" />
+	</definition>
+	
+	<definition name="contactTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Contact Us" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/contact2.jsp" />
+		<put-attribute name="menuselection" value="contact" />
+	</definition>
+	
+	<definition name="aboutTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express About Us" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/about2.jsp" />
+		<put-attribute name="menuselection" value="about" />
+	</definition>
+	
+	<definition name="programsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/programs.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	<definition name="programsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="International News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/programDetails.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	
+	<definition name="nationalprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express National Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/nationalPrograms.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	<definition name="nationalprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="National News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/nationalProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	<definition name="stateprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express State Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/statePrograms.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	
+	<definition name="stateprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="State News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/stateProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	<definition name="businessprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Business Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/businessPrograms.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	<definition name="businessprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="National News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/businessProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	<definition name="sportprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Sports Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/sportPrograms.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	<definition name="sportsprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Sports News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/sportProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	<definition name="technologyprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Technology Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/technologyPrograms.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="technologyprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Technology News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/technologyProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="astroprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Astro &amp; Dharma Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/astroPrograms.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	<definition name="astroprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Astro &amp; Dharma News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/astroProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	<definition name="linkprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Link Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/linkPrograms.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="linkprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Link News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/linkProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="sponsorprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Sponsor Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/sponsorPrograms.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	<definition name="sponsorprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Sponsor News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/sponsorProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	<definition name="advertisementprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Advertisement Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/advertisementPrograms.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	<definition name="advertisementprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Advertisement News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/advertisementProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	
+	<definition name="greetingprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Greeting Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/greetingPrograms.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	<definition name="greetingprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Greeting News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/greetingProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	<definition name="entertainmentprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Entertainment Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/entertainmentPrograms.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	<definition name="entertainmentprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Entertainment News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/entertainmentProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	
+	<definition name="fashionprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Fashion Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/fashionPrograms.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="fashionprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Fashion News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/fashionProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="photographyprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express photography Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/photographyPrograms.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	<definition name="photographyprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Photography News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/photographyProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	
+	<definition name="gameprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Game Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/gamePrograms.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	<definition name="gameprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Game News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/gameProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	
+	<definition name="otherprogramsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Other Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/otherPrograms.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="otherprogramsDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Other News - Jay Hind Express" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/otherProgramDetails.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="videoTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Videos" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/video.jsp" />
+		<put-attribute name="menuselection" value="videos" />
+	</definition>
+	
+	<definition name="videoDetailTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Videos" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/videoDetails.jsp" />
+		<put-attribute name="menuselection" value="videos" />
+	</definition>
+	
+	<definition name="locationsTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Express Locations" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/locations.jsp" />
+		<put-attribute name="menuselection" value="locations" />
+	</definition>
+	
+	<definition name="slideshowTile" template="/WEB-INF/pages/frontPages/slideshow.jsp">
+		
+	</definition>
+	
+	<definition name="404frontTile" extends="front.definition2" >
+		<put-attribute name="title" value="Jay Hind Expresss Page Not Found" />
+		<put-attribute name="body" value="/WEB-INF/pages/frontPages/404.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="base.definition" template="/WEB-INF/pages/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/pages/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/pages/footer.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="adminHomePage" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Expresss admin Home Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/admin.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	<definition name="userHomePage" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Expresss User Home Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/userHomePage.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	<definition name="403" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Expresss Access Denied" />
+		<put-attribute name="body" value="/WEB-INF/pages/403.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	<definition name="404" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Expresss Page Not Found" />
+		<put-attribute name="body" value="/WEB-INF/pages/404.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	<definition name="aboutadminTile" extends="base.definition" >
+		<put-attribute name="title" value="DAM About Us" />
+		<put-attribute name="body" value="/WEB-INF/pages/about.jsp" />
+		<put-attribute name="menuselection" value="about" />
+	</definition>
+	
+	
+	
+	<definition name="addProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/international/addProgram.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	<definition name="editProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/international/editProgram.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	<definition name="viewProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/international/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	<definition name="selectProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/international/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	<definition name="addMorePhotoTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/international/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="international" />
+	</definition>
+	
+	
+	<definition name="addUserAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add User" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/addProgram.jsp" />
+		<put-attribute name="menuselection" value="user" />
+	</definition>
+	
+	<definition name="editUserAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit User" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/editProgram.jsp" />
+		<put-attribute name="menuselection" value="user" />
+	</definition>
+	
+	<definition name="viewUsersTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Users" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="user" />
+	</definition>
+	
+	<definition name="selectUsersTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Users" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="user" />
+	</definition>
+	
+	<definition name="addMorePhotoUserTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="user" />
+	</definition>
+	
+	
+	<definition name="addNationalProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="National News" />
+		<put-attribute name="body" value="/WEB-INF/pages/national/addProgram.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	<definition name="editNationalProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Edit National News" />
+		<put-attribute name="body" value="/WEB-INF/pages/national/editProgram.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	<definition name="viewNationalProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="View National News" />
+		<put-attribute name="body" value="/WEB-INF/pages/national/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	<definition name="selectNationalProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Select National News" />
+		<put-attribute name="body" value="/WEB-INF/pages/national/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	<definition name="addMoreNationalPhotoTile" extends="base.definition" >
+		<put-attribute name="title" value="Add National News Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/national/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="national" />
+	</definition>
+	
+	
+	<definition name="addStateProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="State News" />
+		<put-attribute name="body" value="/WEB-INF/pages/state/addProgram.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	
+	<definition name="editStateProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Edit State News" />
+		<put-attribute name="body" value="/WEB-INF/pages/state/editProgram.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	
+	<definition name="viewStateProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="View State News" />
+		<put-attribute name="body" value="/WEB-INF/pages/state/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	
+	<definition name="selectStateProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Select State News" />
+		<put-attribute name="body" value="/WEB-INF/pages/state/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	
+	<definition name="addMoreStatePhotoTile" extends="base.definition" >
+		<put-attribute name="title" value="Add State News Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/state/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="state" />
+	</definition>
+	
+	
+	<definition name="addOtherProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Other News" />
+		<put-attribute name="body" value="/WEB-INF/pages/other/addProgram.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="editOtherProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Edit Other News" />
+		<put-attribute name="body" value="/WEB-INF/pages/other/editProgram.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="viewOtherProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="View Other News" />
+		<put-attribute name="body" value="/WEB-INF/pages/other/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="selectOtherProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Select Other News" />
+		<put-attribute name="body" value="/WEB-INF/pages/other/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="addMoreOtherPhotoTile" extends="base.definition" >
+		<put-attribute name="title" value="Add Other News Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/other/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="other" />
+	</definition>
+	
+	<definition name="addVideoAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Video" />
+		<put-attribute name="body" value="/WEB-INF/pages/video/addVideo.jsp" />
+		<put-attribute name="menuselection" value="videos" />
+	</definition>
+	
+	<definition name="editVideoAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Video" />
+		<put-attribute name="body" value="/WEB-INF/pages/video/editVideo.jsp" />
+		<put-attribute name="menuselection" value="videos" />
+	</definition>
+	
+	<definition name="viewVideosTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Videos" />
+		<put-attribute name="body" value="/WEB-INF/pages/video/viewVideo.jsp" />
+		<put-attribute name="menuselection" value="videos" />
+	</definition>
+	
+	<definition name="selectVideosTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Video" />
+		<put-attribute name="body" value="/WEB-INF/pages/video/selectVideo.jsp" />
+		<put-attribute name="menuselection" value="videos" />
+	</definition>
+	
+	
+	
+	<definition name="addBusinessProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Business Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/business/addProgram.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	<definition name="editBusinessProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Business Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/business/editProgram.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	<definition name="viewBusinessProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Business Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/business/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	<definition name="selectBusinessProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Business Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/business/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	<definition name="addMorePhotoBusinessTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/business/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="business" />
+	</definition>
+	
+	
+	<definition name="addSportProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Sports Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/sports/addProgram.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	<definition name="editSportProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Sports Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/sports/editProgram.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	<definition name="viewSportProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Sports Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/sports/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	<definition name="selectSportProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Sports Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/sports/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	<definition name="addMorePhotoSportTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Sports Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/sports/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="sports" />
+	</definition>
+	
+	
+	<definition name="addTechnologyProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Technology Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/technology/addProgram.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="editTechnologyAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Technology Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/technology/editProgram.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="viewTechnologyProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Technology Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/technology/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="selectTechnologyProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Technology Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/technology/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="addMorePhotoTechnologyTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Technology Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/technology/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="technology" />
+	</definition>
+	
+	<definition name="addAstroProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Astro Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/astro/addProgram.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	<definition name="editAstroAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Astro Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/astro/editProgram.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	<definition name="viewAstroProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Astro Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/astro/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	<definition name="selectAstroProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Astro Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/astro/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	<definition name="addMorePhotoAstroTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Astro Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/astro/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="astro" />
+	</definition>
+	
+	
+	<definition name="addLinkProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Link Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/link/addProgram.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="editLinkAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Link Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/link/editProgram.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="viewLinkProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Link Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/link/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="selectLinkProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Link Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/link/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="addMorePhotoLinkTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Link Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/link/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="link" />
+	</definition>
+	
+	<definition name="addSponsorProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Sponsor Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/sponsor/addProgram.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	<definition name="editSponsorAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Sponsor Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/sponsor/editProgram.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	<definition name="viewSponsorProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Sponsor Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/sponsor/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	<definition name="selectSponsorProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select sponsor Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/sponsor/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	<definition name="addMorePhotoSponsorTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Sponsor Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/sponsor/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="sponsor" />
+	</definition>
+	
+	
+	<definition name="addAdvertisementProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Advertisement Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/advertisement/addProgram.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	<definition name="editAdvertisementAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Advertisement Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/advertisement/editProgram.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	<definition name="viewAdvertisementProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Advertisement Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/advertisement/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	<definition name="selectAdvertisementProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select advertisement Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/advertisement/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	<definition name="addMorePhotoAdvertisementTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Advertisement Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/advertisement/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="advertisement" />
+	</definition>
+	
+	
+	<definition name="addGreetingProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Greeting Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/greeting/addProgram.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	<definition name="editGreetingAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Greeting Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/greeting/editProgram.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	<definition name="viewGreetingProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Greeting Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/greeting/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	<definition name="selectGreetingProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select greeting Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/greeting/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	<definition name="addMorePhotoGreetingTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Greeting Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/greeting/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="greeting" />
+	</definition>
+	
+	
+	<definition name="addPollProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Poll Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/poll/addProgram.jsp" />
+		<put-attribute name="menuselection" value="poll" />
+	</definition>
+	
+	<definition name="editPollAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Poll Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/poll/editProgram.jsp" />
+		<put-attribute name="menuselection" value="poll" />
+	</definition>
+	
+	<definition name="viewPollProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Poll Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/poll/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="poll" />
+	</definition>
+	
+	<definition name="selectPollProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Poll Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/poll/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="poll" />
+	</definition>
+	
+	<definition name="addMorePhotoPollTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Poll Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/poll/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="poll" />
+	</definition>
+	
+	<definition name="addEntertainmentProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Entertainment Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/entertainment/addProgram.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	<definition name="editEntertainmentAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Entertainment Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/entertainment/editProgram.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	<definition name="viewEntertainmentProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Entertainment Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/entertainment/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	<definition name="selectEntertainmentProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Entertainment Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/entertainment/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	<definition name="addMorePhotoEntertainmentTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Entertainment Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/entertainment/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="entertainment" />
+	</definition>
+	
+	<definition name="addFashionProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Fashion Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/fashion/addProgram.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="editFashionAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Fashion Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/fashion/editProgram.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="viewFashionProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Fashion Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/fashion/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="selectFashionProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Fashion Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/fashion/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="addMorePhotoFashionTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Fashion Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/fashion/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="fashion" />
+	</definition>
+	
+	<definition name="addGameProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Game Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/game/addProgram.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	<definition name="editGameAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Game Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/game/editProgram.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	<definition name="viewGameProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Game Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/game/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	<definition name="selectGameProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Game Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/game/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	<definition name="addMorePhotoGameTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Game Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/game/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="game" />
+	</definition>
+	
+	<definition name="addPhotographyProgramAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Add Photography Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/photography/addProgram.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	<definition name="editPhotographyAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Edit Photography Program" />
+		<put-attribute name="body" value="/WEB-INF/pages/photography/editProgram.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	<definition name="viewPhotographyProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Photography Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/photography/viewProgram.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	<definition name="selectPhotographyProgramsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Photography Programs" />
+		<put-attribute name="body" value="/WEB-INF/pages/photography/selectProgram.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	<definition name="addMorePhotoPhotographyTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Photography Add Photo" />
+		<put-attribute name="body" value="/WEB-INF/pages/photography/addMorePhoto.jsp" />
+		<put-attribute name="menuselection" value="photography" />
+	</definition>
+	
+	
+	<definition name="viewContactsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express View Contacts" />
+		<put-attribute name="body" value="/WEB-INF/pages/contact/viewContact.jsp" />
+		<put-attribute name="menuselection" value="contact" />
+	</definition>
+	
+	<definition name="selectContactsTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Select Contacts" />
+		<put-attribute name="body" value="/WEB-INF/pages/contact/selectContact.jsp" />
+		<put-attribute name="menuselection" value="contact" />
+	</definition>
+
+	<definition name="changePasswordTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express Change Password" />
+		<put-attribute name="body" value="/WEB-INF/pages/password/changePassword.jsp" />
+		<put-attribute name="menuSelection" value="password" />
+	</definition>
+	
+	<definition name="viewHomePageSettingsAdminTile" extends="base.definition" >
+		<put-attribute name="title" value="Jay Hind Express HomePage Settings" />
+		<put-attribute name="body" value="/WEB-INF/pages/homepagesettings/viewSettings.jsp" />
+		<put-attribute name="menuSelection" value="homepage" />
+	</definition>
+
+</tiles-definitions>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="hibernate.connection.CharSet">utf-8</property>
+        <property name="hibernate.connection.characterEncoding">utf-8</property>
+        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.connection.connectionCollation">utf8_general_ci</property>
+        <property name="hibernate.connection.characterSetResults">utf-8</property>
+
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		<property name="connection.url">
+			jdbc:postgresql://localhost:5432/jayhind?useUnicode=true
+           &amp;connectionCollation=utf8_general_ci
+           &amp;characterSetResults=utf8
+           &amp;characterEncoding=utf-8
+		</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">postgres</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">10</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache  -->
+		<property name="cache.provider_class">
+			org.hibernate.cache.NoCacheProvider
+		</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- <property name="hbm2ddl.auto">update</property> -->
+	
+		
+		
+		<mapping class="com.models.Role" />
+		<mapping class="com.models.UserAttempts" />
+		<mapping class="com.models.UserLogin" />
+		<mapping class="com.models.UserRole" />
+		<mapping class="com.models.Program" />
+		<mapping class="com.models.NationalProgram" />
+		<mapping class="com.models.StateProgram" />
+		<mapping class="com.models.OtherProgram" />
+		<mapping class="com.models.Video" />
+		<mapping class="com.models.Contact" />
+		<mapping class="com.models.Heading" />
+		<mapping class="com.models.Business" />
+		<mapping class="com.models.Sport" />
+		<mapping class="com.models.Technology" />
+		<mapping class="com.models.Astro" />
+		<mapping class="com.models.Poll" />
+		<mapping class="com.models.Entertainment" />
+		<mapping class="com.models.Fashion" />
+		<mapping class="com.models.Game" />
+		<mapping class="com.models.Link" />
+		<mapping class="com.models.Sponsor" />
+		<mapping class="com.models.Advertisement" />
+		<mapping class="com.models.Greeting" />
+		<mapping class="com.models.Photography" />
+		<mapping class="com.models.User" />
+		<mapping class="com.models.HomePage" />
+		
+	</session-factory>
+
+</hibernate-configuration>

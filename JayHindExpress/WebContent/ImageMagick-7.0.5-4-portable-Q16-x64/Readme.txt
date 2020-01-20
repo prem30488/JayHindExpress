@@ -1,0 +1,1 @@
+Download imagemagick from internet and replace this folder.
