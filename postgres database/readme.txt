@@ -1,0 +1,1 @@
+This is backup file of database. use postgresql for backing it up.
